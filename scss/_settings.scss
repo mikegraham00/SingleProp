@@ -1,0 +1,54 @@
+// Settings file to override Foundation variables
+
+// You can find the variables for each component at the bottom of their
+// doc page. We tried to name them to where they'd make sense just by reading them.
+// Go to http://foundation.zurb.com/docs/ to find what you need.
+
+$body-bg: #fff;
+$body-font-color: #222;
+$body-font-family: "Carme", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-weight: normal;
+$body-font-style: normal;
+
+$primary-color: #006F32;
+
+/* Heading font styles */
+
+$header-font-family: "Carme", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: bold;
+$header-font-style: normal;
+$header-font-color: #222;
+$header-line-height: 1.4;
+$header-top-margin: .2em;
+$header-bottom-margin: .5em;
+$header-text-rendering: optimizeLegibility;
+
+/* Heading font sizes */
+
+$h1-font-size: emCalc(44px);
+$h2-font-size: emCalc(37px);
+$h3-font-size: emCalc(27px);
+$h4-font-size: emCalc(23px);
+$h5-font-size: emCalc(18px);
+$h6-font-size: 1em;
+
+/* Subheaders */
+
+$subheader-line-height: 1.4;
+$subheader-font-color: lighten($header-font-color, 30%);
+$subheader-font-weight: 300;
+$subheader-top-margin: .2em;
+$subheader-bottom-margin: .5em;
+
+
+/* Background color for the top bar */
+$topbar-bg: #fff;
+
+/* Set the link colors and styles for top-level nav */
+$topbar-link-color: #222;
+$topbar-link-color-hover: #222;
+$topbar-link-color-active: #222;
+$topbar-link-weight: normal;
+$topbar-link-hover-lightness: 0; 
+$topbar-link-bg-hover: transparent;
+$topbar-link-bg-active: transparent;

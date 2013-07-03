@@ -1,0 +1,256 @@
+/* Welcome and glad you are using Reverie.
+ * This is the main stylesheet loaded by default.
+ * Edit the file and have fun.
+ * http://themefortress.com/reverie */
+
+// import normalize, stay at top
+@import "normalize";
+
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+//@import "app";
+
+/* Start to customize Reverie */
+
+//custom fonts
+
+@import url(http://fonts.googleapis.com/css?family=Carme);
+
+// add some extra style to row to beautify custom background image
+/*header.row,
+*.container.row,
+*.row.full-width {
+*	background-color: rgba(255,255,255,0.9);
+}*/
+
+// adjusting header
+h4.subheader {
+	margin-top: -1em;
+}
+
+// add new pagination class for WordPress, Sass is amazingly fast
+.page-numbers { @include pagination; }
+
+// customizing pagination for WordPress using Foundation mixins, this is not beautiful I know
+.page-numbers li {
+	span:hover a,
+	span a:focus {
+		background: $pagination-link-active-bg;
+	}
+	span.current {
+		background: $pagination-link-current-background;
+		padding: $pagination-link-pad;
+		color: $pagination-link-current-font-color;
+		font-weight: $pagination-link-current-font-weight;
+		cursor: $pagination-link-current-cursor;
+	}
+}
+
+// add some basic comment styles
+ol.commentlist {
+	margin-left: 0;
+	margin-top: 2em;
+	li {
+		list-style: none;
+		margin-bottom: 2em;
+	}
+		.comment-author img {
+			border-radius: 50%;
+			float: left;
+			margin: 0 1em 0 0;
+		}
+		.author-meta {
+			display: inline-block;
+		}
+			cite.fn {
+				@extend h4;
+				margin-right: 0.5em;
+			}
+		section.comment {
+			@include panel(white, 20px);
+		}
+			a.comment-reply-link {
+				float: right;
+				position: relative;
+				bottom: 1em;
+			}
+}
+
+// add some extra margin to ul
+ul {
+	margin-#{$default-float}: $list-side-margin;
+}
+
+// add some margin for embeds in post
+figure {
+	margin-bottom: $paragraph-margin-bottom;
+}
+
+// adjust search button on top-bar
+input.prefix.button {
+	line-height: 1;
+}
+
+// adjust search button on sideba
+#sidebar input.prefix.button {
+	line-height: 0.7;
+}
+
+// Add Class for Images
+img.alignright {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+	
+img.alignleft {
+	float: left;
+	margin: 0 18px 18px 0;
+}
+
+img.aligncenter {
+	display: block;
+	margin: 18px auto;
+	}
+
+// Add HTML5 Caption Class for Images
+figure.figure {
+	margin: 0 auto;
+	display: inline-block;
+	figcaption {
+		padding: 8px 10px;
+		color: gray;
+		margin-bottom: $paragraph-margin-bottom;
+	}
+}
+
+figure.alignright.figure {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+
+figure.alignleft.figure {
+	float: left;
+	margin: 0 18px 18px 0;
+}
+
+
+/**************************************************/
+/******************CUSTOM STYLES*******************/
+/**************************************************/
+
+.flushright {
+	padding-right: 0;
+}
+.flushleft {
+	padding-left: 0;	
+}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1200px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+@media screen and (max-width: 1200px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -600px;   /* 50% **/
+  }
+}
+
+.contain-to-grid {
+	background-color: #fff;
+	padding: 12px 0;
+	margin-bottom: 0;
+	.top-bar {
+		margin-bottom: 0;
+	}
+	
+}
+
+.top-bar .name h1 a {
+	padding-left: 0;
+}
+
+.top-bar-section li {
+	a{
+		text-transform: uppercase;
+		letter-spacing: .2em;
+	}
+	&:last-child a {
+		padding-right: 0;
+	}
+}
+
+.top-bar-section li a:not(.button):hover {
+	background: #fff;
+}
+
+li.divider:first-child {
+	border-left: none;
+}
+
+//AGENT INFO
+
+.agent-info {
+	background-color: rgba(255,255,255, .4);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	h3 {
+		font-size: emCalc(18px);
+		letter-spacing: normal;
+		margin-bottom: 0;
+
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		line-height: 1.1em;
+		font-size: .8em;
+		&.agent-title {
+			text-transform: uppercase;
+			margin-bottom: 12px;
+		}
+	}
+
+}
+
+.row.more-info {
+	margin-top: 16px;
+	h3 {
+		font-size: emCalc(18px);
+		letter-spacing: .1em;
+		margin-bottom: 0;
+		a {
+			color: #ffffff;
+			font-weight: normal;
+			&:hover {
+				color: #d9d9d9;
+			}
+		}
+
+	}
+}
+
+
+
